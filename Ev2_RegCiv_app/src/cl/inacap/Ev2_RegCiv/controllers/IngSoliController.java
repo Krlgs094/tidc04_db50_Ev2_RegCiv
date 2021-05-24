@@ -37,7 +37,7 @@ public class IngSoliController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		request.getRequestDispatcher("WEB-INF/vistas/formSoli.jsp").forward(request, response);;
+		request.getRequestDispatcher("WEB-INF/vistas/formSoli.jsp").forward(request, response);
 	}
 
 	/**
@@ -68,6 +68,7 @@ public class IngSoliController extends HttpServlet {
 			solicitud.setTipoSoli(tipoSoli);
 			solicitudesDAO.save(solicitud);
 			request.setAttribute("mensaje","Solicitud ingresada correctamente");
+			request.getRequestDispatcher("AtenderSolicitudesController.do").forward(request, response);
 		} else {
 			request.setAttribute("errores", errores);
 		}

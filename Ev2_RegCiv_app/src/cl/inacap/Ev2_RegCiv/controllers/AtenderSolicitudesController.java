@@ -39,7 +39,6 @@ public class AtenderSolicitudesController extends HttpServlet {
 		
 		if(request.getParameter("solicitudEliminar") != null) {
 			String solicitudes = request.getParameter("solicitudEliminar").trim();
-			
 			List<Solicitud> busqueda = solicitudesDAO.filterByName(solicitudes);
 			Solicitud solicitudEliminar = busqueda.isEmpty()? null:busqueda.get(0);
 			if(solicitudEliminar != null) {
