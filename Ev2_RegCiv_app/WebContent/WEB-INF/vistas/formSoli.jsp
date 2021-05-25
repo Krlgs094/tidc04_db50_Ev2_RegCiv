@@ -6,13 +6,9 @@
 		<div class="columns is-centered mb-6">
 			<div class="column is-6">
 			
-				<c:if test="${mensaje != null}">
-					<div class="notification is-success is-light">
-							<p>${mensaje}</p>
-					</div>
-				</c:if>
+				
 				<c:if test="${errores != null}">
-					<div class="notification is-danger is-light">
+					<div class="notification is-warning">
 					 	<h6>Existen errores en el formularios</h6>
 					 	<div class="content">
 					 		<ul>
@@ -29,7 +25,7 @@
 			<div class="column is-6">
 				<form method="post" action="IngSoliController.do">
 					<div class="card">
-						<div class="card-header has-background-link">
+						<div class="card-header has-background-primary">
 							<span class="card-header-title">Ingrese su solicitud</span>
 						</div>
 						<div class="card-content">
@@ -61,7 +57,7 @@
 						</div>
 						<div class="card-footer">
 							<div class="card-footer-item">
-								<button type="submit" class="button is-info">Ingresar solicitud</button>
+								<button type="submit" class="button is-primary">Ingresar solicitud</button>
 							</div>
 						</div>
 					</div>
